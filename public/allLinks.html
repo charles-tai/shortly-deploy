@@ -1,5 +1,9 @@
+<input field ng-model = 'query'>
 <div class='link' ng-init = 'getLinks()'>
-  <div ng-repeat= 'link in links'>
+  <button ng-click = 'sort = "-updated_at"'> hottest </button>
+  <button ng-click = 'sort = "-visits"'>visits</button>
+  <button ng-click = 'sort = "-created_at"'>lastest</button>
+  <div ng-repeat= 'link in links | orderBy: sort | filter: {title: query}'>
     <img src='/redirect_icon.png'>
     <div class='info'>
       <div class='visits'>
