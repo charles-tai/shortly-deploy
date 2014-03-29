@@ -1,0 +1,7 @@
+<form ng-submit= 'postLink()'>
+  <input class='text' type='text' name='url' ng-model='data'>
+  <input type='submit' value='Shorten'>
+</form>
+<div ng-show = 'invalidUrl'>
+  <span class = 'error'  > Please enter valid url </span>
+</div>
